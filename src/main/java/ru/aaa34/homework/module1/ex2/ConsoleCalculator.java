@@ -1,4 +1,4 @@
-package ru.aaa34.homework.ex2;
+package ru.aaa34.homework.module1.ex2;
 
 import java.util.Scanner;
 
