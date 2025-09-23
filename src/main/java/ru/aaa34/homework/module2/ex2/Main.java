@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Сумма: " + v1.sum(v2));
         System.out.println("Разность: " + v1.subtract(v2));
 
-        Vector3D[] randomVectors = Vector3D.generateRandomVectors(0);
+        Vector3D[] randomVectors = Vector3D.generateRandomVectors(5);
         System.out.println("\nСлучайные векторы:");
         for (Vector3D v : randomVectors) {
             System.out.println(v);

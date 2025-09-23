@@ -75,7 +75,7 @@ public class ConsoleCalculator {
 
     // Проверка на корректность ввода выражения. Чуть позже добавлю на проверку оператора действия
     public static boolean checkExpression(String[] arrayExpression) {
-        if (arrayExpression.length < 3) {
+        if (arrayExpression.length != 3) {
             System.out.println("Ошибка! Некорректное выражение.");
             return false;
         }
@@ -84,7 +84,7 @@ public class ConsoleCalculator {
             Double.parseDouble(arrayExpression[0]);
             Double.parseDouble(arrayExpression[2]);
         }
-        catch (Exception e) {
+        catch (NumberFormatException e) {
             System.out.println("Ошибка! Не удалось форматировать выражение.");
             return false;
         }
@@ -111,8 +111,7 @@ public class ConsoleCalculator {
 
     private static double divide(double num1, double num2) {
         if (num2 == 0) {
-            System.out.println("Ошибка - деление на 0!");
-            return 0;
+            throw new ArithmeticException("Ошибка - деление на 0!");
         }
         return num1 / num2;
     }
